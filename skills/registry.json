@@ -1,0 +1,28 @@
+{
+  "skills": {
+    "ifttt_notify": {
+      "description": "Send a notification via an IFTTT webhook.",
+      "risk": "medium",
+      "requires_approval": true,
+      "allowed_agents": ["any"],
+      "required_args": ["title", "message"],
+      "side_effects": ["external HTTP POST to maker.ifttt.com"]
+    },
+    "email_notify": {
+      "description": "Send an email through configured SMTP credentials.",
+      "risk": "medium",
+      "requires_approval": true,
+      "allowed_agents": ["any"],
+      "required_args": ["subject", "body"],
+      "side_effects": ["external SMTP send"]
+    },
+    "sms_email_notify": {
+      "description": "Send a short message to a phone via the carrier's email-to-SMS gateway.",
+      "risk": "medium",
+      "requires_approval": true,
+      "allowed_agents": ["any"],
+      "required_args": ["message"],
+      "side_effects": ["external SMTP send"]
+    }
+  }
+}
