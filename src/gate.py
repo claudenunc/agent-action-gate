@@ -8,7 +8,7 @@ import json
 from pathlib import Path
 
 from action_queue import ActionQueue
-from approval_log import append as approval_append, verify as approval_verify
+from approval_log import verify as approval_verify
 from config import load_settings
 from executor import SkillExecutor, SkillError
 from guardian_classifier import classify
@@ -91,34 +91,16 @@ class Gate:
             decision="approved",
             result=result,
         )
-        approval_append(
-            action_id,
-            actor,
-            "approved",
-            action["skill_name"],
-            action["args"],
-            root=self.root,
-        )
         return result
 
     def reject(self, action_id: str, reason: str, actor: str = "human"):
-        action = self.queue.get(action_id)
-        action = self.queue.update_status(
+        return self.queue.update_status(
             action_id,
             status="rejected",
             actor=actor,
             decision="rejected",
             rejection_reason=reason,
         )
-        approval_append(
-            action_id,
-            actor,
-            "rejected",
-            action["skill_name"],
-            action["args"],
-            root=self.root,
-        )
-        return action
 
     # ---- read-only helpers -------------------------------------------------
 
