@@ -29,7 +29,7 @@ These commands are honored automatically per CTIA guidelines.
 ## 5. Support contact
 
 For questions about messages received, contact:
-- Email: envy@foolishnessenvy.com (or iamaienvy@gmail.com)
+- Email: foolishnessenvy@gmail.com
 
 ## 6. Software license
 

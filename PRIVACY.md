@@ -44,7 +44,7 @@ The operator (Nathan Michel) operates a Sole Proprietor messaging campaign on Tw
 
 ## 3. Contact
 
-For privacy questions, contact: envy@foolishnessenvy.com (or iamaienvy@gmail.com if Zoho not yet provisioned)
+For privacy questions, contact: foolishnessenvy@gmail.com
 
 ## 4. Changes
 
